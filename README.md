@@ -5,4 +5,4 @@ an update on julaing's twitter dim mode. i also changed the color to make it dim
 
 add stylus.css in stylus or just copy the css code
 
-https://chromewebstore.google.com/detail/clngdbkpkpeebahjckkjfobafhncgmne?utm_source=item-share-cb
+https://userstyles.world/style/31599/xitter-dim-mode-twitter-x-com
