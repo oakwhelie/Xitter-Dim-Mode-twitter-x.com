@@ -1,0 +1,386 @@
+:root[data-theme="dark"] {
+    --x-dim-background: #15202B;
+    --x-dim-raised-background: #192734;
+    --x-dim-hover-background: #22303C;
+    --x-dim-active-background: #1C2938;
+    --x-dim-border: #38444D;
+    --x-dim-text-primary: #F7F9F9;
+    --x-dim-text-secondary: #8B98A5;
+    --x-dim-backdrop: rgba(21, 32, 43, 0.85);
+    --x-dim-overlay: rgba(91, 112, 131, 0.4);
+    --x-dim-shadow:
+        rgba(136, 153, 166, 0.2) 0 0 15px,
+        rgba(136, 153, 166, 0.15) 0 0 3px 1px;
+
+    background-color: var(--x-dim-background) !important;
+    color-scheme: dark;
+}
+
+
+/* Page shell and timeline surfaces. Semantic selectors keep the feed
+   covered when X changes its generated React Native class names. */
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] [data-testid="primaryColumn"],
+:root[data-theme="dark"] [data-testid="sidebarColumn"],
+:root[data-theme="dark"] [data-testid="sidebarColumn"] aside,
+:root[data-theme="dark"] [data-testid="sidebarColumn"] section,
+:root[data-theme="dark"] [data-testid="primaryColumn"] [data-testid="cellInnerDiv"],
+:root[data-theme="dark"] [data-testid="primaryColumn"] article[data-testid="tweet"],
+:root[data-theme="dark"] [data-testid="primaryColumn"] [data-testid="tweetTextarea_0_label"],
+:root[data-theme="dark"] [data-testid="primaryColumn"] [data-testid="tweetTextarea_0RichTextInputContainer"],
+:root[data-theme="dark"] [data-testid="primaryColumn"] [data-testid="toolBar"],
+:root[data-theme="dark"] .r-kemksi,
+:root[data-theme="dark"] .bg-background,
+:root[data-theme="dark"] .bg-modal-background,
+:root[data-theme="dark"] .jf-element .j-vdda9x11 {
+    background-color: var(--x-dim-background) !important;
+}
+
+:root[data-theme="dark"] body {
+    color: var(--x-dim-text-primary) !important;
+    scrollbar-color: var(--x-dim-border) var(--x-dim-hover-background) !important;
+}
+
+/* X writes both regular black and High Contrast black directly into style
+   attributes. The generated High Contrast class is included as a fallback.
+   Media is excluded so intentional black letterboxing is preserved. */
+:root[data-theme="dark"] :is(
+    [style*="background-color: rgb(0, 0, 0)"],
+    [style*="background-color: rgb(5, 5, 5)"],
+    .r-16331v6
+):not(
+    img,
+    video,
+    [data-testid="tweetPhoto"],
+    [data-testid="tweetPhoto"] *,
+    [data-testid="testCondensedMedia"],
+    [data-testid="testCondensedMedia"] *,
+    [data-testid="card.layoutLarge.media"],
+    [data-testid="card.layoutLarge.media"] *,
+    [data-testid*="video" i],
+    [data-testid*="video" i] *
+) {
+    background-color: var(--x-dim-background) !important;
+}
+
+/* Sticky navigation uses a translucent surface over the page. */
+:root[data-theme="dark"] .r-5zmot {
+    background-color: var(--x-dim-backdrop) !important;
+}
+
+/* Menus, hover cards, dialogs and other raised surfaces. */
+:root[data-theme="dark"] .r-cl2sl0,
+:root[data-theme="dark"] [data-testid="Dropdown"],
+:root[data-theme="dark"] [data-radix-popper-content-wrapper] > div,
+:root[data-theme="dark"] [role="dialog"].bg-gray-0 {
+    background-color: var(--x-dim-raised-background) !important;
+}
+
+:root[data-theme="dark"] .r-z32n2g,
+:root[data-theme="dark"] .r-14tof1o,
+:root[data-theme="dark"] [data-testid="dm-search-bar"].bg-gray-0,
+:root[data-theme="dark"] .bg-gray-50 {
+    background-color: var(--x-dim-active-background) !important;
+}
+
+/* Timeline and menu interaction states. */
+:root[data-theme="dark"] [data-testid="primaryColumn"] article[data-testid="tweet"]:hover,
+:root[data-theme="dark"] .r-g2wdr4,
+:root[data-theme="dark"] .r-cuuowz,
+:root[data-theme="dark"] .r-1cuuowz,
+:root[data-theme="dark"] .jf-element .j-cw4uj611,
+:root[data-theme="dark"] [data-testid="Dropdown"] [role="menuitem"]:hover,
+:root[data-theme="dark"] [data-radix-popper-content-wrapper] [role="menuitem"]:hover,
+:root[data-theme="dark"] [data-testid^="dm-conversation-item-"]:hover {
+    background-color: var(--x-dim-hover-background) !important;
+}
+
+:root[data-theme="dark"] [data-testid="Dropdown"] [role="menuitem"]:active,
+:root[data-theme="dark"] [data-radix-popper-content-wrapper] [role="menuitem"]:active,
+:root[data-theme="dark"] [data-testid^="dm-conversation-item-"][data-selected="true"] {
+    background-color: var(--x-dim-active-background) !important;
+}
+
+/* Borders and conversation thread lines. */
+:root[data-theme="dark"] .r-gu4em3,
+:root[data-theme="dark"] .r-1bnu78o,
+:root[data-theme="dark"] .r-1wh73dq {
+    background-color: var(--x-dim-border) !important;
+}
+
+:root[data-theme="dark"] [data-testid="primaryColumn"],
+:root[data-theme="dark"] .r-1kqtdi0,
+:root[data-theme="dark"] .r-1igl3o0,
+:root[data-theme="dark"] .r-2sztyj,
+:root[data-theme="dark"] .r-vpktly,
+:root[data-theme="dark"] .r-1roi411,
+:root[data-theme="dark"] .r-dgm4ly,
+:root[data-theme="dark"] .border-background,
+:root[data-theme="dark"] .border-gray-50,
+:root[data-theme="dark"] .border-gray-100,
+:root[data-theme="dark"] .border-gray-200 {
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Text colors from the former Dim palette. Accent colors are untouched. */
+:root[data-theme="dark"] .r-1nao33i,
+:root[data-theme="dark"] .jf-element .j-4t3tug11,
+:root[data-theme="dark"] [style*="color: rgb(231, 233, 234)"] {
+    color: var(--x-dim-text-primary) !important;
+}
+
+:root[data-theme="dark"] .r-1bwzh9t,
+:root[data-theme="dark"] .jf-element .j-tibd4011,
+:root[data-theme="dark"] .public-DraftEditorPlaceholder-hasFocus,
+:root[data-theme="dark"] .public-DraftEditorPlaceholder-root,
+:root[data-theme="dark"] .text-gray-700,
+:root[data-theme="dark"] .\!text-gray-700,
+:root[data-theme="dark"] .text-subtext2,
+:root[data-theme="dark"] [style*="color: rgb(113, 118, 123)"] {
+    color: var(--x-dim-text-secondary) !important;
+}
+
+/* Direct Messages use a newer component library than most of X. */
+:root[data-theme="dark"] [data-testid="dm-container"],
+:root[data-theme="dark"] [data-testid="dm-inbox-panel"] > div,
+:root[data-theme="dark"] [data-testid="dm-conversation-content"],
+:root[data-theme="dark"] [data-testid="dm-conversation-header"],
+:root[data-theme="dark"] [data-testid="dm-message-list-container"],
+:root[data-theme="dark"] [data-testid="dm-composer-container"] {
+    background-color: var(--x-dim-background) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+:root[data-theme="dark"] [data-testid="dm-composer-input-container"],
+:root[data-theme="dark"] [data-testid="dm-composer-container"] button {
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Overlays, shadows and Firefox scrollbars. */
+:root[data-theme="dark"] [data-testid="mask"],
+:root[data-theme="dark"] [class~="bg-black/80"] {
+    background-color: var(--x-dim-overlay) !important;
+}
+
+:root[data-theme="dark"] .r-qo02w8,
+:root[data-theme="dark"] .r-1uusn97,
+:root[data-theme="dark"] .r-19od9ir,
+:root[data-theme="dark"] .r-1jyoszn {
+    box-shadow: var(--x-dim-shadow) !important;
+}
+
+:root[data-theme="dark"] .scrollbar-thin-custom {
+    scrollbar-color: var(--x-dim-border) var(--x-dim-hover-background) !important;
+}
+
+
+:root[data-theme="dark"] header[data-page-header] {
+    background-color: var(--x-dim-background) !important;
+    color: var(--x-dim-text-primary) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Sticky translucent header backdrop */
+:root[data-theme="dark"] header[data-page-header] > div[aria-hidden="true"] {
+    background-color: var(--x-dim-backdrop) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* Timeline tab container and separators */
+:root[data-theme="dark"] header[data-page-header] [role="tablist"],
+:root[data-theme="dark"] header[data-page-header] > div[data-orientation="horizontal"] > div {
+    background-color: var(--x-dim-background) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Tab labels */
+:root[data-theme="dark"] header[data-page-header] [role="tab"] {
+    color: var(--x-dim-text-secondary) !important;
+}
+
+:root[data-theme="dark"] header[data-page-header] [role="tab"][aria-selected="true"],
+:root[data-theme="dark"] header[data-page-header] [role="tab"]:hover {
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Active tab underline */
+:root[data-theme="dark"] header[data-page-header] [role="tab"] > span[aria-hidden="true"].pointer-events-none {
+    background-color: var(--x-dim-text-primary) !important;
+}
+
+/* Tab dropdown icons */
+:root[data-theme="dark"] header[data-page-header] [role="tab"] svg {
+    color: inherit !important;
+}
+
+/* X logo */
+:root[data-theme="dark"] header[data-page-header] [data-icon="icon-logo-x"] {
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Subscribe and manage timeline buttons */
+:root[data-theme="dark"] header[data-page-header] [data-slot="xds-button"] {
+    color: var(--x-dim-text-primary) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Button hover */
+:root[data-theme="dark"] header[data-page-header] [data-slot="xds-button"]:hover {
+    background-color: var(--x-dim-hover-background) !important;
+}
+
+/* Button active */
+:root[data-theme="dark"] header[data-page-header] [data-slot="xds-button"]:active {
+    background-color: var(--x-dim-active-background) !important;
+}
+
+/* Preserve X accent-colored elements */
+:root[data-theme="dark"] header[data-page-header] .bg-btn-brand {
+    background-color: #1D9BF0 !important;
+}
+
+:root[data-theme="dark"] div.sticky.flex.w-full.flex-col:has(> section) {
+    background-color: var(--x-dim-background) !important;
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Direct child sections */
+:root[data-theme="dark"] div.sticky.flex.w-full.flex-col:has(> section) > section {
+    background-color: var(--x-dim-background) !important;
+    border-color: var(--x-dim-border) !important;
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Direct child search container */
+:root[data-theme="dark"] div.sticky.flex.w-full.flex-col:has(> section) > div {
+    background-color: var(--x-dim-background) !important;
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Direct child footer */
+:root[data-theme="dark"] div.sticky.flex.w-full.flex-col:has(> section) > nav {
+    background-color: var(--x-dim-background) !important;
+    color: var(--x-dim-text-secondary) !important;
+}
+
+/* Sticky search header background */
+:root[data-theme="dark"] body .sticky:has(> div > form[role="search"]) {
+    background-color: var(--x-dim-background) !important;
+}
+
+/* Search bar outer container */
+:root[data-theme="dark"] form[role="search"] {
+    background-color: var(--x-dim-background) !important;
+}
+
+/* Search input surface */
+:root[data-theme="dark"] form[role="search"] [data-slot="xds-combobox-input-group"] {
+    background-color: var(--x-dim-raised-background) !important;
+    border-color: var(--x-dim-border) !important;
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Search input text */
+:root[data-theme="dark"] form[role="search"] input[data-slot="xds-combobox-input"] {
+    background-color: transparent !important;
+    color: var(--x-dim-text-primary) !important;
+    caret-color: var(--x-dim-text-primary) !important;
+}
+
+/* Placeholder */
+:root[data-theme="dark"] form[role="search"] input::placeholder {
+    color: var(--x-dim-text-secondary) !important;
+    opacity: 1 !important;
+}
+
+/* Search icon */
+:root[data-theme="dark"] form[role="search"] [data-icon="icon-search"] {
+    color: var(--x-dim-text-secondary) !important;
+}
+
+/* Search bar hover */
+:root[data-theme="dark"] form[role="search"] [data-slot="xds-combobox-input-group"]:hover {
+    background-color: var(--x-dim-hover-background) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Search bar focus */
+:root[data-theme="dark"] form[role="search"] [data-slot="xds-combobox-input-group"]:focus-within {
+    background-color: var(--x-dim-raised-background) !important;
+    border-color: #1D9BF0 !important;
+}
+
+:root[data-theme="dark"] div.sticky[class*="before:bg-primary"]::before {
+    background-color: var(--x-dim-background) !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+/* Profile sticky tab bar */
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 {
+    background-color: var(--x-dim-backdrop) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* Profile tab bar separator */
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 > div {
+    background-color: var(--x-dim-background) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Profile tab buttons */
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 [role="tab"] {
+    color: var(--x-dim-text-secondary) !important;
+}
+
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 [role="tab"][aria-selected="true"],
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 [role="tab"]:hover {
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Active tab underline */
+:root[data-theme="dark"] div[data-orientation="horizontal"].bg-primary\/80 [role="tab"] > span[aria-hidden="true"].pointer-events-none {
+    background-color: var(--x-dim-text-primary) !important;
+}
+
+/* Sticky profile header */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 {
+    background-color: var(--x-dim-backdrop) !important;
+    backdrop-filter: blur(12px) !important;
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Back button hover */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 button.hover\:bg-hover-subtle:hover {
+    background-color: var(--x-dim-hover-background) !important;
+}
+
+/* Header text */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 .text-primary {
+    color: var(--x-dim-text-primary) !important;
+}
+
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 .text-secondary,
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 .text-subtext2 {
+    color: var(--x-dim-text-secondary) !important;
+}
+
+/* Following button */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"] {
+    color: var(--x-dim-text-primary) !important;
+    border-color: var(--x-dim-border) !important;
+}
+
+/* Following button hover */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"]:hover {
+    background-color: var(--x-dim-hover-background) !important;
+}
+
+/* Following button active */
+:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"]:active {
+    background-color: var(--x-dim-active-background) !important;
+}
+
+:root[data-theme="dark"] .bg-linear-to-br {
+    background-image: none !important;
+}
