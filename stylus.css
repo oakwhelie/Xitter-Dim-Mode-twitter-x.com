@@ -2,7 +2,7 @@
 /* ==UserStyle==
 @name           Xitter-Dim-Mode-twitter-x.com
 @namespace      local.oakwhelie.Xitter-Dim-Mode-twitter.xcom
-@version        1.0.1
+@version        1.0.2
 @description    Restore twitter/x dim mode
 @author         julaing/GPT5.6Sol
 ==/UserStyle== */
@@ -498,7 +498,6 @@ textarea::placeholder {
 
 /* Create post / Reply modal */
 [data-slot="xds-modal-surface"] {
-    background-color: #192734 !important;
     --x-modal-bg: #192734 !important;
     border-color: #38444D !important;
     outline-color: #38444D !important;
