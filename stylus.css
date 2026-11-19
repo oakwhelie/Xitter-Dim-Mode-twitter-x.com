@@ -2,7 +2,7 @@
 /* ==UserStyle==
 @name           Xitter-Dim-Mode-twitter-x.com
 @namespace      local.oakwhelie.Xitter-Dim-Mode-twitter.xcom
-@version        1.0.0
+@version        1.0.1
 @description    Restore twitter/x dim mode
 @author         julaing/GPT5.6Sol
 ==/UserStyle== */
@@ -394,6 +394,212 @@
     background-image: none !important;
 }
 
+/* Post page sticky header */
+:root[data-theme="dark"] [data-top-chrome].bg-primary\/80 {
+    background-color: var(--x-dim-backdrop) !important;
+    backdrop-filter: blur(12px) !important;
+    color: var(--x-dim-text-primary) !important;
+}
 
+/* Post page header title */
+:root[data-theme="dark"] [data-top-chrome] h2.text-primary {
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Back button */
+:root[data-theme="dark"] [data-top-chrome] button[data-slot="xds-button"] {
+    color: var(--x-dim-text-primary) !important;
+}
+
+/* Back button hover */
+:root[data-theme="dark"] [data-top-chrome] button[data-slot="xds-button"]:hover {
+    background-color: var(--x-dim-hover-background) !important;
+}
+
+/* Back button active */
+:root[data-theme="dark"] [data-top-chrome] button[data-slot="xds-button"]:active {
+    background-color: var(--x-dim-active-background) !important;
+}
+
+/* Timeline sidebar */
+.bg-primary {
+    background-color: #15202B !important;
+}
+
+.border-normal,
+.border-divider,
+.border-b,
+.border-t,
+.border-s {
+    border-color: #38444D !important;
+}
+
+/* Embedded post */
+[data-slot="embedded-tweet-frame"] {
+    background-color: #192734 !important;
+    border-color: #38444D !important;
+}
+
+[data-slot="embedded-tweet-frame"]:hover {
+    background-color: #22303C !important;
+}
+
+/* Timeline post hover */
+.outline-focus.transition-colors:hover {
+    background-color: #192734 !important;
+}
+
+/* Reply composer */
+textarea,
+textarea::placeholder {
+    color: #F7F9F9 !important;
+}
+
+textarea::placeholder {
+    color: #8B98A5 !important;
+}
+
+/* Timeline text */
+.text-primary {
+    color: #F7F9F9 !important;
+}
+
+.text-secondary,
+.text-subtext1,
+.text-subtext2 {
+    color: #8B98A5 !important;
+}
+
+/* Buttons */
+.hover\:bg-btn-ghost-hover:hover,
+.hover\:bg-hover-subtle:hover {
+    background-color: #22303C !important;
+}
+
+.active\:bg-btn-ghost-pressed:active {
+    background-color: #1C2938 !important;
+}
+
+/* Reply button */
+.bg-btn-primary {
+    background-color: #F7F9F9 !important;
+    color: #15202B !important;
+}
+
+/* Timeline separators */
+.border-divider {
+    border-color: #38444D !important;
+}
+
+/* Composer and sidebar backgrounds */
+.bg-primary\/80 {
+    background-color: rgba(21, 32, 43, 0.85) !important;
+}
+
+/* Create post / Reply modal */
+[data-slot="xds-modal-surface"] {
+    background-color: #192734 !important;
+    --x-modal-bg: #192734 !important;
+    border-color: #38444D !important;
+    outline-color: #38444D !important;
+}
+
+/* Mobile modal uses the primary background */
+[data-slot="xds-modal-surface"].max-sm\:bg-primary {
+    background-color: #15202B !important;
+    --x-modal-bg: #15202B !important;
+}
+
+/* Modal header and footer sticky backgrounds */
+[data-slot="xds-modal-surface"] header::before,
+[data-slot="xds-modal-surface"] [data-slot="xds-modal-footer"]::before {
+    background-color: var(--x-modal-bg) !important;
+}
+
+/* Header/footer fade gradients */
+[data-slot="xds-modal-surface"] header::after {
+    background: linear-gradient(
+        to bottom,
+        var(--x-modal-bg),
+        transparent
+    ) !important;
+}
+
+[data-slot="xds-modal-surface"] .sticky.bottom-\(--x-modal-pad\,0px\)::after {
+    background: linear-gradient(
+        to top,
+        var(--x-modal-bg),
+        transparent
+    ) !important;
+}
+
+/* Quoted post container */
+[data-slot="xds-modal-surface"] .border-normal {
+    border-color: #38444D !important;
+}
+
+[data-slot="xds-modal-surface"] .outline-focus:hover {
+    background-color: #22303C !important;
+}
+
+/* Composer */
+[data-slot="xds-modal-surface"] textarea {
+    background-color: transparent !important;
+    color: #F7F9F9 !important;
+    caret-color: #F7F9F9 !important;
+}
+
+[data-slot="xds-modal-surface"] textarea::placeholder {
+    color: #8B98A5 !important;
+    opacity: 1;
+}
+
+/* Text colors */
+[data-slot="xds-modal-surface"] .text-primary {
+    color: #F7F9F9 !important;
+}
+
+[data-slot="xds-modal-surface"] .text-secondary {
+    color: #8B98A5 !important;
+}
+
+[data-slot="xds-modal-surface"] .text-tertiary {
+    color: #8B98A5 !important;
+}
+
+/* Toolbar and header button hover/active states */
+[data-slot="xds-modal-surface"] .x-button:hover,
+[data-slot="xds-modal-surface"] .x-button[aria-expanded="true"] {
+    background-color: #22303C !important;
+}
+
+[data-slot="xds-modal-surface"] .x-button:active {
+    background-color: #1C2938 !important;
+}
+
+/* Button borders and toolbar separators */
+[data-slot="xds-modal-surface"] .border-normal,
+[data-slot="xds-modal-surface"] .before\:border-normal::before {
+    border-color: #38444D !important;
+}
+
+/* Reply button */
+[data-slot="xds-modal-surface"] .bg-btn-primary {
+    background-color: #F7F9F9 !important;
+    color: #15202B !important;
+}
+
+[data-slot="xds-modal-surface"] .bg-btn-primary:hover {
+    background-color: #DCE3E8 !important;
+}
+
+[data-slot="xds-modal-surface"] .bg-btn-primary:active {
+    background-color: #C8D1D9 !important;
+}
+
+[data-slot="xds-modal-surface"] .bg-btn-primary:disabled {
+    background-color: #38444D !important;
+    color: #8B98A5 !important;
+}
 
 }
