@@ -1,8 +1,7 @@
-@-moz-document domain("x.com") {
 /* ==UserStyle==
 @name           Xitter-Dim-Mode-twitter-x.com
 @namespace      local.oakwhelie.Xitter-Dim-Mode-twitter.xcom
-@version        1.0.2
+@version        1.0.3
 @description    Restore twitter/x dim mode
 @author         julaing/GPT5.6Sol
 ==/UserStyle== */
@@ -374,22 +373,6 @@
     color: var(--x-dim-text-secondary) !important;
 }
 
-/* Following button */
-:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"] {
-    color: var(--x-dim-text-primary) !important;
-    border-color: var(--x-dim-border) !important;
-}
-
-/* Following button hover */
-:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"]:hover {
-    background-color: var(--x-dim-hover-background) !important;
-}
-
-/* Following button active */
-:root[data-theme="dark"] div.sticky.bg-primary\/80.z-30 [data-slot="xds-button"]:active {
-    background-color: var(--x-dim-active-background) !important;
-}
-
 :root[data-theme="dark"] .bg-linear-to-br {
     background-image: none !important;
 }
@@ -478,12 +461,6 @@ textarea::placeholder {
 
 .active\:bg-btn-ghost-pressed:active {
     background-color: #1C2938 !important;
-}
-
-/* Reply button */
-.bg-btn-primary {
-    background-color: #F7F9F9 !important;
-    color: #15202B !important;
 }
 
 /* Timeline separators */
@@ -588,6 +565,11 @@ textarea::placeholder {
     color: #15202B !important;
 }
 
+.bg-btn-primary:hover,
+.bg-btn-primary[aria-expanded="true"] {
+    color: var(--x-dim-text-primary) !important;
+}
+
 [data-slot="xds-modal-surface"] .bg-btn-primary:hover {
     background-color: #DCE3E8 !important;
 }
@@ -601,4 +583,3 @@ textarea::placeholder {
     color: #8B98A5 !important;
 }
 
-}
